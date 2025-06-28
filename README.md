@@ -6,24 +6,18 @@
 - 自动定时检查 Epic 商店限免游戏，并推送给所有订阅用户
 - 支持 /start 订阅、/stop 取消订阅、/checknow 手动查询当前限免
 - 支持多用户订阅，自动管理订阅者列表
-- 推送内容包含游戏标题、原价、限免时间、领取直达链接及封面图片
+- 推送内容包含游戏标题、限免时间、领取直达链接及封面图片
 - 支持自定义时区、推送时间、地区和语言
 
 ## 快速开始
 
 ### 1. 克隆项目
 ```bash
-git clone <本项目地址>
-cd epic_notify
+git clone 
 ```
 
 ### 2. 安装依赖
 建议使用 Python 3.8 及以上版本。
-```bash
-pip install -r requirements.txt
-```
-
-如无 requirements.txt，可手动安装主要依赖：
 ```bash
 pip install python-telegram-bot requests python-dotenv pytz
 ```
@@ -42,6 +36,7 @@ EPIC_COUNTRY=CN               # Epic商店国家
 ### 4. 启动机器人
 ```bash
 python epic.py
+# python3 epic.py
 ```
 
 ## 使用说明
@@ -55,20 +50,7 @@ python epic.py
 - `subscribers.json`订阅用户列表
 - `.env`            配置文件
 
-## 常见问题
-- **Bot 无法推送消息？**
-  - 检查 Bot Token 是否正确，Bot 是否已加入群组/频道并被授权。
-- **定时推送不准？**
-  - 检查服务器时区，或调整 .env 中的 `TARGET_TIMEZONE`。
-- **API 获取失败？**
-  - 可能是 Epic API 变动或网络问题，可稍后重试。
-
 ## 代码生成
-本项目中的大部分代码由 Google 的大型语言模型 **Gemini Pro** 生成。
+本项目中的代码由 **Google Gemini 2.5 Pro** 生成。
 
-## 致谢
-- [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot)
-- [Epic Games Store](https://store.epicgames.com/)
 
----
-如有问题或建议，欢迎 Issue 或 PR！
